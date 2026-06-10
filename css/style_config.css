@@ -1,0 +1,96 @@
+.caixa h1,
+.caixa h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.caixa {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815);
+  width: 100%;
+  display:flex;
+  padding-top: 40px;
+  color: white;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15%;
+  box-sizing: border-box;
+}
+
+.caixa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.caixa input {
+  position: relative;
+  font-size: 150%;
+  height: 7vh;
+  width: 20vw;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.caixa button {
+  display: block;
+  text-align: center;
+  height: 6vh;
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+button.gremio {
+  box-shadow: 0 0 3px rgb(0, 0, 255);
+}
+
+button.inter {
+  box-shadow: 0 0 3px rgb(255, 0, 0);
+}
+
+.inter:hover {
+  background-color: rgb(187, 36, 36);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gremio:hover {
+  background-color: rgb(74, 74, 253);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button.botaoVermelho{
+    background: red;
+    border: 3px solid darkred;
+}
+
+button.botaoVermelho:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}

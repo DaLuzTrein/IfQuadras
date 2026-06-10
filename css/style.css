@@ -1,0 +1,76 @@
+* {
+  margin: 0
+}
+
+body {
+  background-image: url('../imagens/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.815);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    top:0;
+    height: 15%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+  height: 100%;
+}
+
+.container1{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 85vh;
+  margin-top: 15vh;
+}
+
+.container2 {
+  display: block;
+  width: 33%;
+  justify-content: center;
+}
+
+.caixa {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815);
+  width: 100%;
+  display:flex;
+  margin-top: 10%; 
+  color: white;
+  height: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  box-sizing: border-box;
+}
+
+.caixa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}

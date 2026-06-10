@@ -1,0 +1,399 @@
+.container2 {
+  width: 75%;
+  display: block;
+  justify-content: center;
+}
+
+.caixa {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815);
+  width: 100%;
+  display:flex;
+  margin-top: 0; 
+  color: white;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  box-sizing: border-box;
+}
+
+.caixa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.botaoSelecao {
+  display: block;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.botaoSelecao.esquerda {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 10px;
+  border: 3px solid blue;
+  color: whitesmoke;
+}
+
+
+.botaoSelecao.esquerda:hover {
+  background-color: rgb(74, 74, 253);
+  color: black;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.botaoSelecao.meio {
+  position: relative;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 10px;
+  border: none;
+  color: whitesmoke;
+}
+
+.botaoSelecao.meio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 3px;
+  border-radius: 10px;
+  border: 3px solid red;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.botaoSelecao.meio:hover {
+  color: black;
+  background: linear-gradient(to right, blue, red);
+  cursor:pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.botaoSelecao.direita {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 10px;
+  border: 3px solid red;
+  color: whitesmoke;
+}
+
+.botaoSelecao.direita:hover {
+  color: black;
+  background-color: rgb(187, 36, 36);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.botaoConfig {
+  position: fixed;
+  height: auto;
+  width: auto;
+  bottom: 5%;
+  left: 2%;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.815);
+  border: 3px solid blue;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.botaoConfig:hover {
+  background-color: rgb(74, 74, 253);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.estante {
+  position: relative;
+  margin-top: 3%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 80%;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 30px;
+  min-height: 100%;
+  max-height: 70vh;
+  overflow-y: auto;
+  backdrop-filter: blur(5px);
+  scrollbar-width: none;
+}
+
+.estante::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.equipamentos {
+  height: 80vh;
+  width: 50%;
+  font-size: 1.3rem;
+}
+
+.prateleira {
+  position: relative;
+  background-color: #00000091;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.prateleira::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, blue, red);
+  filter: blur(15px);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 2px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.prateleira:hover {
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.prateleira.inter {
+  border: 2px solid red;
+}
+
+.prateleira.inter:hover {
+  background-color: #00000091;
+  cursor: auto;
+  transform: none;
+}
+
+.prateleira.inter::before {
+  background: none;
+  mask: none;
+  mask-composite: none;
+  box-shadow: none ;
+}
+
+.prateleira.gremio {
+  border: 2px solid blue;
+}
+
+.prateleira.gremio:hover {
+  background-color: #00000091;
+  cursor: auto;
+  transform: none;
+}
+
+.prateleira.gremio::before {
+  background: none;
+  mask: none;
+  mask-composite: none;
+  box-shadow: none ;
+}
+
+.caixa input {
+  position: relative;
+  font-size: 150%;
+  height: 5vh;
+  width: 20vw;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+button {
+  width: 20vw;
+  height:5vh;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;  
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.815);
+  border-radius: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+button.inter {
+  width: 20vw;
+  height:7vh;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  border: 2px solid rgb(155, 0, 0);
+  background-color: rgb(255, 0, 0);
+  border-radius: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+select {
+  position: relative;
+  font-size: 120%;
+  height: 5vh;
+  width: 20vw;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.inter:hover {
+  background-color: rgb(187, 36, 36);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.containerReservas1 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  min-height: 85vh;
+}
+
+.containerReservas2 {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  min-height: 85vh;
+}
+
+.caixaReservas1 {
+  text-align: center;
+  font-size: 18px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815);
+  width: 90%;
+  display:flex;
+  margin-top: 5%; 
+  color: white;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.caixaReservas2 {
+  text-align: center;
+  font-size: 18px;
+  border: 2px solid red;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.815);
+  width: 90%;
+  display:flex;
+  margin-top: 5%; 
+  color: white;
+  height: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.containerReservasPrincipal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-height: 85vh;
+  margin-top: 15vh;
+}
+
+.botaoVerde {
+  width: 20vw;
+  height: 7vh;
+  background-color: rgb(0, 230, 0);
+  color: white;
+  border: 2px solid green;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.botaoVerde:hover {
+  background-color: rgb(0, 180, 0);
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease
+}
+
+.naoInteragivel {
+  background-color: rgb(99, 99, 99);
+  cursor: not-allowed;
+}
